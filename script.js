@@ -19,7 +19,7 @@ showMoreBtn.addEventListener("click", () => {
     descriptionText.style.maxHeight = "80px";
     showMoreBtn.textContent = "Показать все ▼";
   } else {
-    descriptionText.style.maxHeight = "1000px"; // Yetarlicha katta bo‘lishi kerak
+    descriptionText.style.maxHeight = "1000px";
     showMoreBtn.textContent = "Скрыть ▲";
   }
   isExpanded = !isExpanded;
