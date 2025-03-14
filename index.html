@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Glort.uz</title>
+  </head>
+  <body>
+    <section>
+      <!-- ============ Header section =============== -->
+      <div class="navbar">
+        <img src="/img/hamburger 1.png" alt="hamburger" />
+        <div class="navbar-search__box">
+          <img class="search-icon" src="img/search-lg.png" alt="search-icon" />
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Искать на Glotr"
+          />
+        </div>
+      </div>
+
+      <!-- ============ Main section ================= -->
+      <div class="main">
+        <!-- ============ breadcrumb section ================= -->
+
+        <nav class="breadcrumb">
+          <a href="#">Главная</a>
+          <span> > </span>
+          <a href="#">Товары</a>
+          <span> > </span>
+          <a href="#" class="current">Красота и здоровье</a>
+        </nav>
+
+        <!-- ============ product section ================= -->
+
+        <div class="product">
+          <!-- ============ tabs section ================= -->
+
+          <div class="product-tabs">
+            <button class="tab" onclick="openTab('description')">
+              Описание
+            </button>
+            <button class="tab active" onclick="openTab('features')">
+              Характеристика
+            </button>
+            <button class="tab" onclick="openTab('seller')">Продавец</button>
+            <button class="tab" onclick="openTab('reviews')">Отзывы</button>
+          </div>
+
+          <!-- ============ product-info section ================= -->
+
+          <div class="product-details">
+            <div class="product-img">
+              <img src="img/product.png" alt="product" />
+            </div>
+
+            <div class="product-info">
+              <h1>Apple Macbook air, M1, 512 SSD gb, 32gb RAM</h1>
+              <div class="product-status">
+                <span class="out-of-stock">Нет в наличии</span>
+                <span class="product-code">Код 32453</span>
+              </div>
+              <p class="product-details__price">12 850 000 сум/шт</p>
+              <div class="product-details__buy">
+                <button class="product-buy__btn">Уточнить наличие</button>
+                <button class="product-info__btn">
+                  <img src="img/Vector.png" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="description-box">
+              <h2>Описание</h2>
+              <p class="description-text">
+                Оптический привод с новой силой. С появлением чипа Apple M1 наш
+                самый тонкий и лёгкий ноутбук полностью преобразился.
+                Центральный процессор теперь работает до 3,5 раза быстрее.
+                Графический — до 5 раз. А благодаря нашей передовой системе
+                Neural Engine скорость машинного обучения возросла до 9 раз.
+                Новый MacBook Air работает без подзарядки дольше, чем предыдущие
+                модели.
+              </p>
+              <span class="show-more">Показать все ▼</span>
+            </div>
+
+            <div class="specs-container">
+              <h2>Характеристики</h2>
+              <table class="specs-table">
+                <tr>
+                  <td>Код товара</td>
+                  <td>MGN93RU/A</td>
+                </tr>
+                <tr>
+                  <td>Производитель</td>
+                  <td>Apple</td>
+                </tr>
+                <tr>
+                  <td>Разрешение экрана</td>
+                  <td>2560x1600</td>
+                </tr>
+                <tr>
+                  <td>Количество ядер процессора</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Оптический привод</td>
+                  <td>Отсутствует</td>
+                </tr>
+                <tr class="hidden">
+                  <td>Операционная система</td>
+                  <td>macOS</td>
+                </tr>
+                <tr class="hidden">
+                  <td>Тип памяти</td>
+                  <td>SSD</td>
+                </tr>
+              </table>
+
+              <button id="toggleButton">Показать все ▼</button>
+            </div>
+
+            <div class="container">
+              <!-- ==== payment ===== -->
+              <div class="card">
+                <h3>Способы оплаты</h3>
+                <ul class="list">
+                  <li>- Наличными</li>
+                  <li>- Перечислением</li>
+                  <li>- Терминал UzCard</li>
+                  <li>- Терминал HUMO</li>
+                  <li>- POS терминал</li>
+                  <li>- Payme</li>
+                  <li class="hidden">- Click</li>
+                  <li class="hidden">- Visa / MasterCard</li>
+                </ul>
+                <button class="toggle-btn">Подробнее ▼</button>
+              </div>
+
+              <!-- ============ delivery ======== -->
+              <div class="card">
+                <h3>Способы доставки</h3>
+                <ul class="list">
+                  <li>- Доставка курьером</li>
+                  <li>- Доставка почтой</li>
+                  <li class="hidden">- Самовывоз</li>
+                </ul>
+                <button class="toggle-btn">Подробнее ▼</button>
+              </div>
+            </div>
+
+            <div class="seller-card">
+              <div class="seller-card__header">
+                <h3>Продавец</h3>
+                <a href="#" class="go-to-site">Перейти на сайт</a>
+              </div>
+              <div class="seller-info">
+                <div class="seller-logo">
+                  <img src="img/Rectangle 28.png" alt="Amazon" />
+                </div>
+                <div>
+                  <h4>Amazon</h4>
+                  <p class="location">г. Ташкент, Узбекистан</p>
+                </div>
+              </div>
+              <div class="details">
+                <p>
+                  <img src="img/time.png" alt="" class="icon" /> Сегодня
+                  работает до 18:00
+                  <a href="#" class="schedule">Весь график</a>
+                </p>
+                <p>
+                  <img src="img/phone.png" alt="" class="icon" />
+                  <span class="phone-number">+998 99 ... </span>
+                  <a href="#" class="show-number">показать номер</a>
+                </p>
+                <p>
+                  <img class="icon" src="img/brauzer.png" alt="" />
+                  <a href="https://amazon.com" class="website">amazon.com</a>
+                </p>
+              </div>
+              <div class="buttons">
+                <button class="all-products">Все товары продавца</button>
+                <button class="call-request">Заказать звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ similar production section ================= -->
+
+        <div class="similar-products">
+            <div class="similar-header">
+                <h2 class="search-title">Похожие товары продавца</h2>
+                <img src="img/right.png" alt="">
+            </div>
+          <div class="product-list" id="product-list"></div>
+        </div>
+
+         <!-- ============ recomendation production section ================= -->
+
+        <div class="recomendation-products">
+            <div class="recomendation-header">
+                <h2 class="recomendation-title">Рекомендуем</h2>
+                <img src="img/right.png" alt="">
+            </div>
+          <div class="recomendation-list"></div>
+        </div>
+
+        <!-- ============ search section ================= -->
+        <div class="search-trends">
+            <div class="search-header">
+                <h2 class="search-title">У нас ищут</h2>
+                <img src="img/right.png" alt="">
+            </div>
+            <div class="search-tags">
+                <button class="search-tag">Камера</button>
+                <button class="search-tag">Куртки женские</button>
+                <button class="search-tag">Автозапчасти</button>
+                <button class="search-tag">Радиаторы и обогреватели</button>
+                <button class="search-tag">Спортивные костюмы</button>
+            </div>
+        </div>
+
+      </div>
+
+
+      <div class="modals">
+        <div id="productModal" class="info-modal">
+            <div class="modal-content info-modal-content">
+                <div class="modal-header">
+                    <span>Вопрос по товару</span>
+                    <span class="close-btn" >×</span>
+                </div>
+                <div class="modal-product-info">
+                    <img src="img/product.png" alt="Product">
+                    <div class="product-details">
+                        <strong>Смарт кольцо для...</strong><br>
+                        <span style="color: green;">В наличии</span> | Код: P-0750167 <br>
+                        <span class="product-price">230 000 сум / шт.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="text" >
+                </div>
+                <div class="form-group">
+                    <label>Текст</label>
+                    <textarea  rows="3"></textarea>
+                </div>
+                <div class="auth-message">
+                    Если Вы хотите сохранить данное письмо в Вашем личном кабинете, пройдите пожалуйста <a href="#">авторизацию</a>
+                </div>
+                <button class="send-btn">Отправить</button>
+            </div>
+        </div>
+        <div class="send-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Подтвердите заказ</span>
+                    <buuton class="close-btn">×</buuton>
+                </div>
+                <div class="modal-body">
+                    <h3>Код подтверждения</h3>
+                    <p>Для подтверждения заказа. Мы вам отправили код на ваш номер <b>+998 90 909 90 90</b></p>
+                    <label class="label" for="code">Код</label>
+                    <input type="text" id="code">
+                    <p>Получить код повторно можно через: <span class="timer">1:52</span></p>
+                    <button class="confirm-btn">Подтвердить заказ</button>
+                    <button class="cancel-btn">Отменить</button>
+                </div>
+            </div>
+        </div>
+        <div class="confirm-modal">
+            <div class="modal-content">
+              
+              <div class="modal-header">
+                <h2>Подтвердите заказ</h2>
+                <span class="close-confirm-btn">×</span>
+              </div>
+          
+             
+              <div class="seller-info">
+                <img src="img/market.png" alt="E-bidet Logo">
+                <div>
+                  <h3>E-bidet Uzbekistan</h3>
+                  <p>Ташкент, Шайхантахурский район</p>
+                </div>
+              </div>
+          
+              
+              <div class="order-status">
+                <img src="img/checked 1.png" alt="">
+                <h3>Номер заказа: <b>3957</b></h3>
+                <p>Ваш заказ успешно принят и передан на обработку продавцу.</p>
+              </div>
+          
+              <!-- Tafsilotlar -->
+              <div class="info-card">
+                <div class="info-item">
+                  <div class="info-item-icons">
+                    <img src="img/like.png" alt="">
+                  <span>Компания</span>
+                  </div>
+                  <b>E-bidet Uzbekistan</b>
+                </div>
+                <div class="info-item">
+                  <div class="info-item-icons">
+                    <img src="img/location.png" alt="">
+                  <span>Адрес</span>
+                  </div>
+                  <b>г.Ташкент, ул. Саларская 35 В две строки</b>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-icons">
+                        <img src="img/watch_gray.png" alt="">
+                  <span>График работы</span>
+                    </div>
+                  <b><a href="#">Посмотреть</a></b>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-icons">
+                        <img src="img/tel_gray.png" alt="">
+                  <span>Номер телефона</span>
+                    </div>
+                  <b>+998 90 900 90 90</b>
+                </div>
+                <div class="info-item">
+                  <div class="info-item-icons">
+                    <img src="img/brauzer_gray.png" alt="">
+                    <span>Сайт</span>
+                  </div>
+                  <b><a href="#">wellblue.gl.uz</a></b>
+                </div>
+              </div>
+          
+              <!-- Tugma -->
+              <button class="all-products-btn">Все товары продавца</button>
+            </div>
+          </div>
+      </div>
+       
+
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
